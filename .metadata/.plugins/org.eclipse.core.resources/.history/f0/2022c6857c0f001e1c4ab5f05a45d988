@@ -1,0 +1,24 @@
+
+import java.util.Scanner;
+public class primeraClase {
+	public static void main(String args[]) {
+		Scanner myObj = new Scanner(System.in);
+		System.out.println("Menu ::::");
+		System.out.println("Para convertir de grados Centigrados a Kelvin presione ::: 1");
+		System.out.println("Para calcular el area de un rectangulo presione ::: 2");
+		System.out.println("Para calcular el area de un circulo presione ::: 3");
+		System.out.println("digite su respuesta");
+		String name = myObj.nextLine();
+		System.out.println("name ::: "+name);
+		String name1 = myObj.nextLine();
+		System.out.println("name1 ::: "+name1);
+		if(myObj.hasNextInt()) {
+			   System.out.println(myObj.nextInt()+" is valid Integer");
+			}
+			else
+			{
+				 System.out.println(myObj.nextInt()+" is not a valid Integer");
+			}
+		myObj.close();
+	} 
+}

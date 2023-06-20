@@ -1,0 +1,35 @@
+
+import java.util.Scanner;
+public class primeraClase {
+	private static int numero;
+	public void incrementoNumero() {
+		numero++;
+	}
+	public static void main(String args[]) {
+		Scanner myObj = new Scanner(System.in);
+		primeraClase num = new primeraClase();
+		boolean resp = true;
+		do {
+			System.out.println("ingrese un numero entero");
+			String valors = myObj.nextLine();
+			if(myObj.hasNextInt()) {
+				numero = Integer.parseInt(valors);
+
+				System.out.println("valor inicial :::: " + numero);
+				num.incrementoNumero();
+				System.out.println("valor final :::: " + numero);
+			}
+			else
+			{
+				System.out.println("no es un numero entero");
+			}
+			System.out.println("si desea continuar presione S, sino, N");
+			String res = myObj.nextLine();
+			if(res.contains("N") || res.contains("n")) {
+				resp =false;
+			}
+		}while(resp);
+			
+		myObj.close();
+	} 
+}

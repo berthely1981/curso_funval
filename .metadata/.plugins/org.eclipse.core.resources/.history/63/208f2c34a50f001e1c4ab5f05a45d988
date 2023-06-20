@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class ejercicio {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner myObj = new Scanner(System.in);
+		System.out.println("Menu ::::");
+		System.out.println("Para convertir de grados Centigrados a Kelvin presione ::: 1");
+		System.out.println("Para calcular el area de un rectangulo presione ::: 2");
+		System.out.println("Para calcular el area de un circulo presione ::: 3");
+		System.out.println("digite su respuesta");
+		String name =myObj.nextLine();
+		if(myObj.hasNextLine()) {
+			int seleccion = Integer.parseInt(name);
+			if(seleccion < 4 && seleccion > 1){
+				System.out.println("correcto");
+			}else {
+				System.out.println("Escriba un número del 1 al 3");
+			}
+		}else
+		{
+			System.out.println("is not a valid Integer");
+		}
+		myObj.close();
+	}
+
+}
