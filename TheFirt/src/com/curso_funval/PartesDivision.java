@@ -48,6 +48,7 @@ public class PartesDivision {
 	}
 	public void muestraResiduo() {
 		residuo = dividendo - divisor * cociente;
+		residuo = residuo < 0 ? (-1  * residuo) : residuo;
 		System.out.println("El residuo es: "+ residuo);
 	}
 	public void muestraDivision() {
@@ -56,12 +57,33 @@ public class PartesDivision {
 	public static void main(String[] args) {
 		PartesDivision pd = new PartesDivision();
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Ingrese dividendo : ");
-		pd.setDividendo(sc.nextInt());
-		sc.nextLine();
-		System.out.println("Ingrese divisor : ");
-		pd.setDivisor(sc.nextInt());
-		sc.nextLine();
+		boolean continua = false;
+		do {
+			System.out.println("Solo numeros enteros, Ingrese dividendo : ");
+			if(sc.hasNextInt()) {
+				pd.setDividendo(sc.nextInt());
+				sc.nextLine();
+				continua = false;
+			}else {
+				continua = true;
+				System.out.println("Ingrese un entero");
+				sc.next();
+			}
+			
+		}while(continua);
+		do {
+			System.out.println("Solo numeros enteros, Ingrese divisor : ");
+			if(sc.hasNextInt()) {
+				pd.setDivisor(sc.nextInt());
+				sc.nextLine();
+				continua = false;
+			}else {
+				continua = true;
+				System.out.println("Ingrese un entero");
+				sc.next();
+			}
+			
+		}while(continua);
 		
 		pd.muestraCociente();
 		pd.muestraResiduo();
