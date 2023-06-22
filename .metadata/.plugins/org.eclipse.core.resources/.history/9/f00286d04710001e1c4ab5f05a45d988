@@ -1,0 +1,45 @@
+package com.curso_funval;
+import java.util.Scanner;
+
+public class Persona {
+
+    private String nombre;
+    private int edad;
+
+    public void setNombre(String nom) {                                                                           
+        nombre = nom;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setEdad(int ed) {
+        edad = ed;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+    
+    public void obtenerDato() {
+    	Scanner sc = new Scanner(System.in);
+    	System.out.println("Ingresa tu nombre");
+		nombre = sc.nextLine();// p.setNombre(sc.nextLine());
+		System.out.println("Ingresa tu edad");
+		edad = sc.nextInt();
+		// p.setEdad(sc.nextInt());
+		sc.nextLine();
+		sc.close();
+    }
+    
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// Scanner sc = new Scanner(System.in);
+		Persona p = new Persona();
+		p.obtenerDato();
+		System.out.println("Hola :" + p.getNombre());
+		System.out.println("tienes : " + p.getEdad());
+		
+	}
+}

@@ -1,0 +1,19 @@
+package com.curso_funval;
+
+public class PersonasEdad {
+	public 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// Scanner sc = new Scanner(System.in);
+		Persona p1 = new Persona();
+		Persona p2 = new Persona();
+		p1.obtenerDato();
+		p2.obtenerDato();
+		Compara2Numeros cn = new Compara2Numeros(p1.getEdad(), p2.getEdad());
+		
+		
+		System.out.println("Hola :" + p.getNombre());
+		System.out.println("tienes : " + p.getEdad());
+		
+	}
+}

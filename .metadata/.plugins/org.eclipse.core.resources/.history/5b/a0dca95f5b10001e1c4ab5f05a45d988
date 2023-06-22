@@ -1,0 +1,14 @@
+
+package com.curso_funval;
+
+public class ejemplos {
+
+	public static void main(String[] args) {
+		//TODO Auto-generated method stub
+		int three = 3; 
+		String four = "4"; 
+		System.out.println(1 + 2 + three + four+"a"+5+6); 
+		System.out.println(1 + 2 + three + four+"a"+5+6); 
+		System.out.println("a"+5+6); 
+	}
+}
