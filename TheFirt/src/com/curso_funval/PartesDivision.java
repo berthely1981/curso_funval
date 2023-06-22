@@ -74,9 +74,17 @@ public class PartesDivision {
 		do {
 			System.out.println("Solo numeros enteros, Ingrese divisor : ");
 			if(sc.hasNextInt()) {
-				pd.setDivisor(sc.nextInt());
-				sc.nextLine();
-				continua = false;
+				int entrada = sc.nextInt();
+				if(entrada == 0) {
+					System.out.println("El divisor no debede ser 0");
+					continua = true;
+					System.out.println("Ingrese un entero");
+					sc.next();
+				}else {
+					pd.setDivisor(sc.nextInt());
+					sc.nextLine();
+					continua = false;
+				}
 			}else {
 				continua = true;
 				System.out.println("Ingrese un entero");
