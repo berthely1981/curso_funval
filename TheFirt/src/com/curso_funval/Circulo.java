@@ -12,7 +12,8 @@ public class Circulo {
 		this.area = area;
 	}
 
-	public void calculaArea(double r) {
+	public double calculaArea(double r) {
 		setArea(r*r*pi);
+		return getArea();
 	}
 }

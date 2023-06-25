@@ -1,5 +1,6 @@
 package com.curso_funval;
 import java.util.Scanner;
+import com.curso_funval.Circulo;
 
 public class ejercicio {
 
@@ -36,7 +37,8 @@ public class ejercicio {
 					System.out.println("ingrese el valor del radio del circulo :: ");
 					float r = myObj.nextFloat();
 					myObj.nextLine();
-					System.out.println("el resultado es " + 3.14 * r * r );
+					Circulo c = new Circulo();
+					System.out.println("el resultado es " + c.calculaArea(r) );
 					break;
 				default : 
 					System.out.println("opción incorrecta");
